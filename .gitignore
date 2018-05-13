@@ -274,3 +274,6 @@ __pycache__/
 
 # VSCode settings files
 .vscode
+
+# Ignore DS_Store file
+**/.DS_Store
