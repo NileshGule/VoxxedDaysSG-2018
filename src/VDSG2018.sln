@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalksWeb", "TechTalksWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalksAPI", "TechTalksAPI\TechTalksAPI.csproj", "{FE0F34FA-D884-492B-A4E5-234B4FE12438}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalksMQProcessor", "TechTalksMQProcessor\TechTalksMQProcessor.csproj", "{43956D9C-2197-4965-B3E4-8DD99C3A28CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{FE0F34FA-D884-492B-A4E5-234B4FE12438}.Release|x64.Build.0 = Release|x64
 		{FE0F34FA-D884-492B-A4E5-234B4FE12438}.Release|x86.ActiveCfg = Release|x86
 		{FE0F34FA-D884-492B-A4E5-234B4FE12438}.Release|x86.Build.0 = Release|x86
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Debug|x64.ActiveCfg = Debug|x64
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Debug|x64.Build.0 = Debug|x64
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Debug|x86.ActiveCfg = Debug|x86
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Debug|x86.Build.0 = Debug|x86
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Release|x64.ActiveCfg = Release|x64
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Release|x64.Build.0 = Release|x64
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Release|x86.ActiveCfg = Release|x86
+		{43956D9C-2197-4965-B3E4-8DD99C3A28CA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
