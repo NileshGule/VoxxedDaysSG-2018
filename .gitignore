@@ -26,6 +26,10 @@ bld/
 **/releaseOutput
 **/**/releaseOutput/
 **/**/**/releaseOutput/
+**/[Bb]in/
+**/[Oo]bj/
+**/**/[Bb]in/
+**/**/[Oo]bj/
 
 # Visual Studio 2015 cache/options directory
 .vs/
