@@ -56,6 +56,14 @@ dotnet add package Newtonsoft.Json
 dotnet new classlib --output TechTalksModel
 ```
 
+### Add `Microsoft.EntityFrameworkCore` & `Microsoft.EntityFrameworkCore.SqlServer` packages to TechTalksModel project
+
+```bash
+dotnet add package Microsoft.EntityFrameworkCore
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
+
 ### Add `TechTalksModel` api project to `VDSG2018` solution
 
 ```bash
