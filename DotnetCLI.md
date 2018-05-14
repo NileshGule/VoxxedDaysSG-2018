@@ -11,7 +11,7 @@ dotnet new sln --name VDSG2018
 ### Create ASP.NET Core MVC Web project named `TechTalksWeb`
 
 ```bash
-dotnet new razor --output TechTalksWeb
+dotnet new mvc --output TechTalksWeb
 ```
 
 ### Add `TechTalksWeb` web project to `VDSG2018` solution
