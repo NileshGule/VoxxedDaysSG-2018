@@ -1,8 +1,40 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<TechTalksModel.DTO.TechTalkDTO>
+@{
+    ViewData["Title"] = "Tech Talks 2018";
 }
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+<div>
+    <table class="table table-dark table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Description</th>
+      <th scope="col">Category</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(TechTalksModel.DTO.TechTalkDTO item in Model)
+      {
+        <tr>
+          <th scope="row">@Html.DisplayFor(model => item.Id)</th>
+          <td>@Html.DisplayFor(model => item.TechTalkName)</td>
+          <td>@Html.DisplayFor(model => item.CategoryName)</td>
+          <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="alert alert-danger" role="alert">Delete</a>
+            </td>
+        </tr>        
+      }
+  </tbody>
+</table>
+</div>
+
+<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -63,44 +95,18 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
+</div> -->
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+<script type="text/javascript">
+    var localSearchurl = '@Url.Action("DisplayLocalSearchResult", "Home")';
+    var svcSearchurl = '@Url.Action("DisplayTechTalksResult", "Home")';
+    function localSearchValue() {
+        var keyWord = $('#keyword').val();
+        $('#LocalSearchResult').load(localSearchurl, { searchText: keyWord });
+    }
+    function serviceSearchValue() {
+        var keyWord = $('#keyword').val();
+        var svcUrl = $('#svcUrl').val();
+        $('#ServiceSearchResult').load(svcSearchurl, { searchText: keyWord, serviceUrl: svcUrl });
+    }
+</script>
