@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+
+metadata:
+  name: techtalksapi
+  namespace: abc2018sg-prod
+  labels:
+    run: techtalksapi
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: techtalksapi
+  
+  template:
+    metadata:
+      labels:
+        run: techtalksapi
+    spec:
+      containers:
+      - name: techtalksapi
+        image: nileshgule/techtalksapi
+        env:
+          - name: ASPNETCORE_URLS
+            value: http://0.0.0.0:8080
+          - name: ConnectionStrings__DefaultConnection
+            value: "Server=tcp:abc2018.database.windows.net,1433;Initial Catalog=TechTalksDB;Persist Security Info=False;User ID=nileshsg2018;Password=January2018;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" 
+            
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst

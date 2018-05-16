@@ -1,0 +1,33 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+
+metadata:
+  name: rabbitmq-consumer
+  namespace: abc2018sg-prod
+  labels:
+    run: rabbitmq-consumer
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: rabbitmq-consumer
+  
+  template:
+    metadata:
+      labels:
+        run: rabbitmq-consumer
+        app: rabbitmq-consumer
+    spec:
+      containers:
+      - name: rabbitmq-consumer
+        image: nileshgule/techtalksprocessor
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Development"        
+        - name: ConnectionStrings__DefaultConnection
+          value: "Server=tcp:abc2018.database.windows.net,1433;Initial Catalog=TechTalksDB;Persist Security Info=False;User ID=nileshsg2018;Password=January2018;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+        imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
