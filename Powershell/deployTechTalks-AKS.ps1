@@ -11,7 +11,7 @@ if($ProvisionAKSCluster)
 }
 
 Write-Host "Starting deployment of TechTalks application and services" -ForegroundColor Yellow
-Set-Location ~/projects/VoxxedDaysSG-2018/Kubernetes
+Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS
 
 Write-Host "Creating namespace"  -ForegroundColor Yellow
 kubectl apply --filename 00_VDNamespace.yml

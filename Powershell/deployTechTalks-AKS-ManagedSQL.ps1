@@ -43,4 +43,4 @@ Write-Host "Tech talks Processor deployed successfully" -ForegroundColor Cyan
 
 Write-Host "All the services related to Tech Talks application have been successfully deployed" -ForegroundColor Cyan
 
-Set-Location ~/projects/ABC2018/Powershell
+Set-Location ~/projects/VoxxedDaysSG-2018/Powershell

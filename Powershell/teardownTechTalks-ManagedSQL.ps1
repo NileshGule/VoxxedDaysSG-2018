@@ -14,30 +14,30 @@ Write-Host "Starting deletion of TechTalks application and services" -Foreground
 
 
 Write-Host "Deleting Tech Talks Processor" -ForegroundColor Yellow
-Set-Location ~/projects/ABC2018/Kubernetes-ManagedSQL/TechTalksProcessor
+Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS-ManagedSQL/TechTalksProcessor
 kubectl delete --recursive --filename . 
 
 Write-Host "Tech talks Processor deleted successfully" -ForegroundColor Cyan
 
 Write-Host "Deleting Tech Talks web frontend" -ForegroundColor Yellow
-Set-Location ~/projects/ABC2018/Kubernetes-ManagedSQL/TechTalksWeb
+Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS-ManagedSQL/TechTalksWeb
 kubectl delete --recursive --filename . 
 
 Write-Host "Tech talks web frontend deleted successfully" -ForegroundColor Cyan
 
 Write-Host "Deleting Tech Talks API service" -ForegroundColor Yellow
-Set-Location ~/projects/ABC2018/Kubernetes-ManagedSQL/TechTalksAPI
+Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS-ManagedSQL/TechTalksAPI
 kubectl delete --recursive --filename . 
 
 Write-Host "Tech talks API service deleted successfully" -ForegroundColor Cyan
 
-Set-Location ~/projects/ABC2018/Kubernetes-ManagedSQL
+Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS-ManagedSQL
 
 Write-Host "Deleting namespace"  -ForegroundColor Yellow
-kubectl delete --filename 00_ABCNamespace.yml
+kubectl delete --filename 00_VDNamespace.yml
 Write-Host "Namespace deleted successfully" -ForegroundColor Cyan
 
 
 Write-Host "All the services related to Tech Talks application have been successfully deleted" -ForegroundColor Cyan
 
-Set-Location ~/projects/ABC2018/Powershell
+Set-Location ~/projects/VoxxedDaysSG-2018/Powershell
