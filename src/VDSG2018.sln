@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalksMQProcessor", "Tec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalksModel", "TechTalksModel\TechTalksModel.csproj", "{620227B7-C3B4-4446-8D08-16CEC3314F9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalksELKProcessor", "TechTalksELKProcessor\TechTalksELKProcessor.csproj", "{AA5912FE-C607-4E8E-99B4-BDB63FD99957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{620227B7-C3B4-4446-8D08-16CEC3314F9F}.Release|x64.Build.0 = Release|x64
 		{620227B7-C3B4-4446-8D08-16CEC3314F9F}.Release|x86.ActiveCfg = Release|x86
 		{620227B7-C3B4-4446-8D08-16CEC3314F9F}.Release|x86.Build.0 = Release|x86
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Debug|x64.ActiveCfg = Debug|x64
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Debug|x64.Build.0 = Debug|x64
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Debug|x86.ActiveCfg = Debug|x86
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Debug|x86.Build.0 = Debug|x86
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Release|x64.ActiveCfg = Release|x64
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Release|x64.Build.0 = Release|x64
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Release|x86.ActiveCfg = Release|x86
+		{AA5912FE-C607-4E8E-99B4-BDB63FD99957}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
