@@ -14,7 +14,7 @@ Write-Host "Starting deployment of TechTalks application and services" -Foregrou
 Set-Location ~/projects/VoxxedDaysSG-2018/Kubernetes
 
 Write-Host "Creating namespace"  -ForegroundColor Yellow
-kubectl apply --filename 00_ABCNamespace.yml
+kubectl apply --filename 00_VDNamespace.yml
 Write-Host "Namespace created successfully" -ForegroundColor Cyan
 
 Write-Host "Creating storage class" -ForegroundColor Yellow
