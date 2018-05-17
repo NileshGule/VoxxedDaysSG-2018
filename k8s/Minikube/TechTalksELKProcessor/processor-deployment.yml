@@ -3,7 +3,7 @@ kind: Deployment
 
 metadata:
   name: rabbitmq-elk-processor
-  namespace: abc2018sg
+  namespace: voxxed-days-2018sg
   labels:
     run: rabbitmq-elk-processor
 

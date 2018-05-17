@@ -2,4 +2,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: abc2018sg
+  name: voxxed-days-2018sg

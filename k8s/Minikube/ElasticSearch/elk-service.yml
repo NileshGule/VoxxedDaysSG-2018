@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: abc2018sg
+  namespace: voxxed-days-2018sg
   name: elk
   labels:
     app: elk

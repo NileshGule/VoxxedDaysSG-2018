@@ -3,7 +3,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: elk-deployment
-  namespace: abc2018sg
+  namespace: voxxed-days-2018sg
 spec:
   # serviceName: elk
   # replicas: 3

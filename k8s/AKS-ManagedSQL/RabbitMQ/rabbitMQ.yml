@@ -2,7 +2,7 @@ apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
   name: rabbitmq-deployment
-  namespace: abc2018sg-prod
+  namespace: voxxed-days-2018sg-prod
 spec:
   serviceName: rabbitmq
   # replicas: 3

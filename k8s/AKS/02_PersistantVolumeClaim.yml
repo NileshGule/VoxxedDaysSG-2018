@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: techtalksdb-data
-  namespace: abc2018sg
+  namespace: voxxed-days-2018sg
   annotations:
     volume.beta.kubernetes.io/storage-class: azure-disk
 spec:

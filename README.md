@@ -8,7 +8,8 @@ The code structure is organized as
   - TechTalksWeb : Contains source code for the MVC web frontend named `TechTalksWeb`
   - TechTalksAPI : Contains source code for the backend API named `TechTalksAPI`. The API also acts as a producer of RabbitMQ messages.
   - TechTalksDB : Contains the initialization script for `TechTalksDB` database and the Dockerfile
-  - TechTalksMQProcessor : Contains the RabbitMQ consumer code
+  - TechTalksMQProcessor : Contains code for onsuming events and writing to the SQL database
+  - TechTalksELKProcessor : Contains code for consuming events and writing them to a Elastic Search Index
 - DotnetCLI : Contains the dotnet CLI commands for creating solution, projects and adding external packages
 - Powershell : contains the Powershell scripts for managing Kubernetes deployments and AKS cluster
 - k8s : Contains the Kubernetes Manifest files for Minikube, AKS with containerized SQL Server linux and AKS-ManagedSQL running a managed SQL Database in Azure.

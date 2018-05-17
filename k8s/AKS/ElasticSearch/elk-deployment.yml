@@ -3,7 +3,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: elk-deployment
-  namespace: abc2018sg
+  namespace: voxxed-days-2018sg
 spec:
   # serviceName: elk
   # replicas: 3
@@ -19,7 +19,6 @@ spec:
       - name: sysctl
         image: busybox
         imagePullPolicy: IfNotPresent
-        # command: ["sysctl", "-w", "vm.max_map_count=262144"]
         command:
         - sysctl
         - -w

@@ -3,7 +3,7 @@ kind: Service
 
 metadata:
   name: techtalksapi
-  namespace: abc2018sg-prod
+  namespace: voxxed-days-2018sg-prod
 spec:
   type: LoadBalancer
   ports:
