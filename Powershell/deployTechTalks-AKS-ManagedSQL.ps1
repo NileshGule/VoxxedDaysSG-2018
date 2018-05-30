@@ -14,7 +14,7 @@ Write-Host "Starting deployment of TechTalks application and services" -Foregrou
 Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS-ManagedSQL
 
 Write-Host "Creating namespace"  -ForegroundColor Yellow
-kubectl apply --filename 00_VDNamespace.yml
+kubectl apply --filename 00_VDSGNamespace.yml
 Write-Host "Namespace created successfully" -ForegroundColor Cyan
 
 Write-Host "Deploying RabbitMQ service" -ForegroundColor Yellow

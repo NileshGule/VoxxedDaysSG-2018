@@ -34,7 +34,7 @@ Write-Host "Tech talks API service deleted successfully" -ForegroundColor Cyan
 Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS-ManagedSQL
 
 Write-Host "Deleting namespace"  -ForegroundColor Yellow
-kubectl delete --filename 00_VDNamespace.yml
+kubectl delete --filename 00_VDSGNamespace.yml
 Write-Host "Namespace deleted successfully" -ForegroundColor Cyan
 
 
