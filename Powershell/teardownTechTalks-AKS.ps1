@@ -6,11 +6,11 @@ kubectl delete --recursive --filename .
 
 Write-Host "Tech Talks ELK Consumer deleted successfully" -ForegroundColor Cyan
 
-Write-Host "Deleting Tech Talks Processor" -ForegroundColor Yellow
+Write-Host "Deleting Tech Talks MQ Processor" -ForegroundColor Yellow
 Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS/TechTalksProcessor
 kubectl delete --recursive --filename . 
 
-Write-Host "Tech talks Processor deleted successfully" -ForegroundColor Cyan
+Write-Host "Tech talks MQ Processor deleted successfully" -ForegroundColor Cyan
 
 Write-Host "Deleting Tech Talks web frontend" -ForegroundColor Yellow
 Set-Location ~/projects/VoxxedDaysSG-2018/k8s/AKS/TechTalksWeb

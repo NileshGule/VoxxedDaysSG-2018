@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  sql.data:
+    image: nileshgule/sqlclient
+    build:
+      context: ../src/TechTalksDB
+      dockerfile: Dockerfile
+    
+  webmvc:
+    image: nileshgule/techtalksweb
+    build:
+      context: ../src
+      dockerfile: Dockerfile-TechTalksWeb
+    depends_on: 
+      - techtalks.api
+    ports:
+      - "80:80"
+      
+  techtalks.api:
+    image: nileshgule/techtalksapi
+    build:
+      context: ../src
+      dockerfile: Dockerfile-TechTalksAPI
+    depends_on:
+      - sql.data
+    ports:
+      - "8080:8080"
+
+  techtalks.processor:
+    image: nileshgule/techtalksprocessor
+    build:
+      context: ../src
+      dockerfile: Dockerfile-TechTalksMQProcessor
+
+  techtalks.elkprocessor:
+    image: nileshgule/techtalkselkprocessor
+    build:
+      context: ../src
+      dockerfile: Dockerfile-TechTalksELKProcessor
+
+  

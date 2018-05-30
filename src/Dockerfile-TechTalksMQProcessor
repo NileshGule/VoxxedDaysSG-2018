@@ -1,0 +1,24 @@
+FROM microsoft/aspnetcore-build AS build-env
+
+WORKDIR /app
+
+COPY TechTalksMQProcessor /TechTalksMQProcessor/
+COPY TechTalksModel /TechTalksModel/
+
+# COPY NuGet.config ./
+
+WORKDIR /TechTalksMQProcessor
+RUN dotnet restore
+
+#COPY . ./
+
+RUN dotnet publish --configuration Release --output releaseOutput --no-restore
+
+#build runtime image
+FROM microsoft/aspnetcore
+
+WORKDIR /TechTalksMQProcessor
+
+COPY --from=build-env /TechTalksMQProcessor/releaseOutput ./
+
+ENTRYPOINT ["dotnet", "TechTalksMQProcessor.dll"]
