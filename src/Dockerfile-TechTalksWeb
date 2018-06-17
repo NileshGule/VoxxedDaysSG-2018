@@ -19,6 +19,7 @@ RUN dotnet publish --configuration Release --output releaseOutput --no-restore
 #FROM microsoft/aspnetcore
 FROM microsoft/dotnet:2.1.0-aspnetcore-runtime
 
+
 WORKDIR /TechTalksWeb
 
 COPY --from=build-env /TechTalksWeb/releaseOutput ./
