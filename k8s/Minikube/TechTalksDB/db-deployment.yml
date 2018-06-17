@@ -12,9 +12,11 @@ spec:
         app: db
     spec:
       terminationGracePeriodSeconds: 10
+      
       containers:
       - name: sql2017
         image: microsoft/mssql-server-linux
+        imagePullPolicy: IfNotPresent
         ports:
         - name: dbport
           containerPort: 1433

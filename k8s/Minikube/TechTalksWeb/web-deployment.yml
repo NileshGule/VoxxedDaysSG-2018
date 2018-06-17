@@ -27,7 +27,7 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent   
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst

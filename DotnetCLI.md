@@ -111,3 +111,5 @@ dotnet add package ElasticSearch.Net
 ```bash
 dotnet add package RabbitMQ.Client
 ```
+
+/usr/local/microsoft/powershell/6.0.2/pwsh; exit

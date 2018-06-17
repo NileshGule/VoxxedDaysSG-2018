@@ -21,6 +21,7 @@ spec:
       initContainers:
         - name: init-myservice
           image: nileshgule/sqlclient
+          imagePullPolicy: IfNotPresent
           command:
             - "sh"
             - "-c"
@@ -28,6 +29,7 @@ spec:
       containers:
       - name: techtalksapi
         image: nileshgule/techtalksapi:v1
+        imagePullPolicy: IfNotPresent
         env:
           - name: ASPNETCORE_URLS
             value: http://0.0.0.0:8080
@@ -36,7 +38,7 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
-        imagePullPolicy: Always
+        
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
