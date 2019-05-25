@@ -32,3 +32,11 @@ For a production grade scenario, the application uses managed SQL instance inste
 
 For monitoring, Prometheus and Grafana provide metrics collection and visualization
 ![Monitoring](/images/monitoring.png)
+
+## Slide decks
+
+[![Speakerdeck](/images/title-slide.png)](https://speakerdeck.com/nileshgule/voxxed-days-sg-2018-modernize-application-development-with-highly-scalable-architecture-using-docker-and-azure)
+
+## Video Recording
+
+[![Speakerdeck](/images/voxxed-days-youtube.png)](https://www.youtube.com/watch?v=M5mjJga1joM)
