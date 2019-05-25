@@ -16,3 +16,19 @@ The code structure is organized as
 - `Powershell` : contains the Powershell scripts for managing Kubernetes deployments and AKS cluster
 - `k8s` : Contains the Kubernetes Manifest files for Minikube, AKS with containerized SQL Server linux and AKS-ManagedSQL running a managed SQL Database in Azure.
 
+## Application deployment scenarios
+
+The application with all the components deployed via containers will look as
+![Containerized solution](/images/complete-elk-stack.png)
+
+Database persistance is handled by externalizing the SQL server state using `Persistenet Volumes`
+![Persistent Vlumes](/images/persistent-volume.png)
+
+The application uses queue based load levelling pattern
+![Queue based load levelling](/images/queue-based-load-levelling.png)
+
+For a production grade scenario, the application uses managed SQL instance instead of a containerized version of SQL Server 2017
+![Managed SQL Server](/images/managed-sql-scenario.png)
+
+For monitoring, Prometheus and Grafana provide metrics collection and visualization
+![Monitoring](/images/monitoring.png)
